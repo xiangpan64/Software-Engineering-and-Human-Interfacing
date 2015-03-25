@@ -1,0 +1,35 @@
+----------------------------------------------------------------------------
+This helps debug the program if the canvas is no loaded properly it will error out here.
+   
+ if (!canvaso) {
+      alert('Error: I cannot find the canvas element!');
+      return;
+    }
+
+--------------------------------------------------------------------------------------------
+If I forget to target canvas.getContext or its not properly loaded it would give me an error. 
+    if (!canvaso.getContext) {
+      alert('Error: no canvas.getContext!');
+      return;
+    }
+--------------------------------------------------------------------------------------------
+If my tool selector isn’t working probably or missing an element it will tell me.
+  if (!tool_select) {
+    alert('Error: failed to get the tool element!');
+    return;
+  }
+--------------------------------------------------------------------------------------------
+This was used in multiple tests allows JavaScript to give as much information about the issue as it can if the test doesn’t complete. 
+var txt="";
+function test()
+{
+try
+  {
+    canvas.addEventListener('mousedown', ev_canvas, false);
+  }
+catch(err)
+  {
+  txt="There was an error on this page.\n\n";
+  txt+="Error description: " + err.message + "\n\n";
+  alert(txt);
+  }}

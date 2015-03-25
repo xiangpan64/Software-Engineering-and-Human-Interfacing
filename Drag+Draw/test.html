@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Drag to canvas</title>
+  <script>
+
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=document.getElementById("cmp.png");
+ctx.drawImage(img,10,10);
+
+</script>
+     <style type="text/css">
+       #container {position: relative;}
+       #myCanvas {border: 1px solid black}
+       #imageTemp {position: absolute; top: 1px; left: 1px;}
+     </style>
+</head>
+<body>
+  <img id="computer" src="cmp.png"></img>
+  <img id="server" src="svr.png"></img>Drag to box:
+<div id="cantainer" style="border-style:solid;border-width:5px;"></div>
+
+
+
+<!-- new code   -->
+  <p><label> Drawing Tool: <select id="dtool">
+     <option value="pencil">Pencil</option>
+     <option value="line">Line</option>
+  </select></label></p>
+    <div id="container">
+      <canvas id="myCanvas" width="1000" height="800" >
+        test
+      </canvas>
+    </div>
+   <script type="text/javascript"
+    src="main.js"></script>
+</body>
+
+
+</html>
+

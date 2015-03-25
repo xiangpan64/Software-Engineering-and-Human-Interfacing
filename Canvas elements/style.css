@@ -1,0 +1,11 @@
+#container { 
+        position: relative; 
+}
+#myCanvas { 
+        border: 1px solid black;
+ }
+#imageView {
+        border: 1px solid black;
+}
+
+
